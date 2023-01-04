@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="598.0" style="-fx-background-color: #0AABBA;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.Controller">
+    <children>
+        <Label layoutX="219.0" layoutY="50.0" text="Image Upload ">
+            <font>
+                <Font name="BM HANNA Pro OTF" size="26.0" />
+            </font>
+         <textFill>
+            <LinearGradient endX="0.8714285714285714" endY="0.3476190476190476" startX="0.35714285714285715" startY="0.7904761904761904">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8722000122070312" green="0.8899999856948853" blue="0.876326858997345" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.7525584697723389" blue="0.2076023370027542" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+        </Label>
+      <MenuBar prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: #2B879E; -fx-border-color: #0A516D; -fx-border-width: 1; -fx-font-family: &quot;BM HANNA Pro OTF&quot;;">
+        <menus>
+          <Menu mnemonicParsing="false" style="-fx-font-size: 14px; -fx-font-family: &quot;BM HANNA Pro OTF&quot;;" text="File Upload">
+            <items>
+              <MenuItem fx:id="uploadButton" mnemonicParsing="false" onAction="#uploadImage" style="-fx-font-family: &quot;BM HANNA Pro OTF&quot;;" text="Upload" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="73.0" layoutY="97.0" prefHeight="200.0" prefWidth="453.0" style="-fx-background-color: #FCF7C5; -fx-border-color: #F3A358; -fx-border-width: 2;">
+         <children>
+            <Label fx:id="labelFive" layoutX="186.0" layoutY="132.0" textFill="#2b79c3">
+               <font>
+                  <Font name="BM DoHyeon OTF" size="11.0" />
+               </font>
+            </Label>
+              <Label fx:id="labelTwo" layoutX="50.0" layoutY="150.0" prefHeight="23.0" prefWidth="113.0" textFill="#2b79c3">
+               <font>
+                  <Font name="BM DoHyeon OTF" size="11.0" />
+               </font>
+            </Label>
+              <Label fx:id="labelOne" layoutX="50.0" layoutY="132.0" prefHeight="10.0" prefWidth="107.0" textFill="#2b79c3">
+               <font>
+                  <Font name="BM DoHyeon OTF" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageOne" fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="30.0" onMouseClicked="#chooseImageOne" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageTwo" fitHeight="100.0" fitWidth="100.0" layoutX="177.0" layoutY="30.0" onMouseClicked="#chooseImageTwo" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageThree" fitHeight="100.0" fitWidth="100.0" layoutX="315.0" layoutY="30.0" onMouseClicked="#chooseImageThree" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="labelThree" layoutX="323.0" layoutY="132.0" textFill="#2b79c3">
+               <font>
+                  <Font name="BM DoHyeon OTF" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelFour" layoutX="323.0" layoutY="151.0" textFill="#2b79c3">
+               <font>
+                  <Font name="BM DoHyeon OTF" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSix" layoutX="186.0" layoutY="150.0" textFill="#2b79c3">
+               <font>
+                  <Font name="BM DoHyeon OTF" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="74.0" layoutY="313.0" prefHeight="161.0" prefWidth="453.0" style="-fx-border-color: #F3A358; -fx-background-color: #FCF7C5; -fx-font-family: &quot;BM HANNA Pro OTF&quot;; -fx-border-width: 2; -fx-font-size: 14px;">
+         <children>
+            <VBox layoutX="55.0" layoutY="42.0" prefHeight="59.0" prefWidth="146.0">
+               <children>
+                  <CheckBox fx:id="png" mnemonicParsing="false" text=".png" textFill="#1d82e1" />
+                  <CheckBox fx:id="jpg" mnemonicParsing="false" text=".jpg" textFill="#1d82e1" />
+                  <CheckBox fx:id="gif" mnemonicParsing="false" text=".gif" textFill="#1d82e1" />
+               </children>
+            </VBox>
+            <Label layoutX="31.0" layoutY="15.0" prefHeight="17.0" prefWidth="154.0" style="-fx-font-size: 15px;" text="Click Image to Choose:" textFill="#2b79c3">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="convertButton" layoutX="55.0" layoutY="115.0" mnemonicParsing="false" onAction="#convertImage" text="Convert Image">
+               <textFill>
+                  <LinearGradient endX="0.8714285714285714" endY="0.3476190476190476" startX="0.35714285714285715" startY="0.7904761904761904">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3815789520740509" green="0.6359649300575256" blue="0.7631579041481018" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.051100000739097595" green="0.4056847095489502" blue="0.7300000190734863" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Label layoutX="268.0" layoutY="15.0" prefHeight="17.0" prefWidth="154.0" style="-fx-font-size: 15px;" text="Click Image to Choose:" textFill="#2b79c3">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <VBox layoutX="287.0" layoutY="42.0" prefHeight="59.0" prefWidth="146.0">
+               <children>
+                  <CheckBox fx:id="Brighter" mnemonicParsing="false" onAction="#filteredImage" style="-fx-font-size: 14px;" text="Brighter" textFill="#1d82e1" textOverrun="WORD_ELLIPSIS" />
+                  <CheckBox fx:id="Darker" mnemonicParsing="false" onAction="#filteredImage" text="Darker" textFill="#1d82e1" />
+                  <CheckBox fx:id="Grey" mnemonicParsing="false" onAction="#filteredImage" text="Grey" textFill="#1d82e1" />
+               </children>
+            </VBox>
+            <Button fx:id="save" layoutX="287.0" layoutY="115.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="24.0" prefWidth="107.0" text="Save Image">
+               <textFill>
+                  <LinearGradient endX="0.8714285714285714" endY="0.3476190476190476" startX="0.35714285714285715" startY="0.7904761904761904">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3815789520740509" green="0.6359649300575256" blue="0.7631579041481018" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.051100000739097595" green="0.4056847095489502" blue="0.7300000190734863" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
